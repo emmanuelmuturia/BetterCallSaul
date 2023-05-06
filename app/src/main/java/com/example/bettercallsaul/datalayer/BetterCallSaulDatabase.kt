@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(entities = [BetterCallSaulModel::class], version = 1)
-// @TypeConverters(MyTypeConverter::class)
+@TypeConverters(MyTypeConverter::class)
 abstract class BetterCallSaulDatabase : RoomDatabase() {
 
     abstract fun betterCallSaulDAO(): BetterCallSaulDAO

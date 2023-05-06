@@ -37,7 +37,7 @@ class BetterCallSaulViewModel @Inject constructor(application: Application) : An
     }
 
 
-    fun getBetterCallSaulCharacters() {
+    private fun getBetterCallSaulCharacters() {
         viewModelScope.launch {
 
             _betterCallSaulUiState.update { BetterCallSaulState.Loading }

@@ -87,7 +87,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
                         withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
                             append(text = "Occupation: ")
                         }
-                        append(text = betterCallSaul.characterOccupation)
+                        append(text = betterCallSaul.characterOccupation.toString())
                     }
                     )
                     Spacer(modifier = Modifier.height(3.dp))
@@ -105,9 +105,9 @@ fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
                         withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
                             append(text = "Nickname: ")
                         }
-                        append(text = betterCallSaul.characterNickname)
+                        append(text = betterCallSaul.characterNickname.toString())
                     }
-                    )/*
+                    )
                     Spacer(modifier = Modifier.height(3.dp))
                     Text(text =
                     buildAnnotatedString {
@@ -116,7 +116,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
                         }
                         append(text = betterCallSaul.characterAppearance.toString())
                     }
-                    )*/
+                    )
                     Spacer(modifier = Modifier.height(3.dp))
                     Text(text =
                     buildAnnotatedString {
@@ -124,6 +124,24 @@ fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
                             append(text = "Actor: ")
                         }
                         append(text = betterCallSaul.characterActor)
+                    }
+                    )
+                    Spacer(modifier = Modifier.height(3.dp))
+                    Text(text =
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
+                            append(text = "First Appearance: ")
+                        }
+                        append(text = betterCallSaul.firstAppearance.toString())
+                    }
+                    )
+                    Spacer(modifier = Modifier.height(3.dp))
+                    Text(text =
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
+                            append(text = "Last Appearance: ")
+                        }
+                        append(text = betterCallSaul.lastAppearance.toString())
                     }
                     )
                     Spacer(modifier = Modifier.height(3.dp))
@@ -145,6 +163,6 @@ fun SuccessCardPreview() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        SuccessCard(BetterCallSaulModel(characterId = 0, characterName = "Name", characterBirthday = "05/06/1990", characterOccupation = "Lawyer", characterImage = "${R.drawable.img}", characterStatus = "Alive", characterNickname = "Saul", characterActor = "Stock Photo"))
+        SuccessCard(BetterCallSaulModel(characterId = "3he3t", charId = 0, characterName = "Mr. Saul", characterBirthday = "05/06/1970", characterOccupation = listOf("Lawyer"), characterImage = "${R.drawable.img}", characterNickname = listOf("Saul"), characterActor = "Bob", characterAppearance = listOf(1, 2, 3, 4, 5), characterStatus = "Alive", firstAppearance = listOf("Beginning"), lastAppearance = listOf("Final")))
     }
 }

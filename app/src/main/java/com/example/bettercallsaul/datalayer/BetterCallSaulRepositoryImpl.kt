@@ -12,6 +12,6 @@ class BetterCallSaulRepositoryImpl(private val betterCallSaulApiService: BetterC
 
     override suspend fun getAllCharacters() {
         val characters = betterCallSaulApiService.getCharacters()
-        return betterCallSaulDAO.insertAllCharacters(betterCallSaulCharacters = characters)
+        return betterCallSaulDAO.insertAllCharacters(betterCallSaulCharacters = characters.map { it.toBetterCallSaulModel() })
     }
 }
