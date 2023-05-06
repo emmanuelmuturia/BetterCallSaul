@@ -19,8 +19,8 @@ data class BetterCallSaulDTO(
     val characterStatus: String,
     @SerialName("nickname")
     val characterNickname: String,
-    @SerialName("appearance")
-    val characterAppearance: Array<Int>,
+    /*@SerialName("appearance")
+    val characterAppearance: Array<Int> = null,*/
     @SerialName("portrayed")
     val characterActor: String
 )

@@ -23,17 +23,17 @@ data class BetterCallSaulModel(
     val characterStatus: String,
     @ColumnInfo("nickname")
     val characterNickname: String,
-    @ColumnInfo("appearance")
-    val characterAppearance: Array<Int>,
+    /*@ColumnInfo("appearance")
+    val characterAppearance: Array<Int>,*/
     @ColumnInfo("portrayed")
     val characterActor: String
 )
 
 
-@ProvidedTypeConverter
+/*@ProvidedTypeConverter
 class MyTypeConverter {
     @TypeConverter
     fun ArrayToString(characterAppearance: Array<Int>): String {
         return characterAppearance.toString()
     }
-}
+}*/

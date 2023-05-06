@@ -49,4 +49,17 @@ object BetterCallSaulModule {
         return BetterCallSaulDatabase.getDatabase(context = context)
     }
 
+
+    @Provides
+    @Singleton
+    fun providesDAO(betterCallSaulDatabase: BetterCallSaulDatabase): BetterCallSaulDAO {
+        return betterCallSaulDatabase.betterCallSaulDAO()
+    }
+
+    @Provides
+    @Singleton
+    fun providesRepository(betterCallSaulApiService: BetterCallSaulApiService, betterCallSaulDAO: BetterCallSaulDAO): BetterCallSaulRepositoryImpl {
+        return BetterCallSaulRepositoryImpl(betterCallSaulApiService = betterCallSaulApiService, betterCallSaulDAO = betterCallSaulDAO)
+    }
+
 }
