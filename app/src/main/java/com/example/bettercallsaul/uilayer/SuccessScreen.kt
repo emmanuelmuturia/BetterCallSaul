@@ -16,6 +16,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -26,13 +28,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.example.bettercallsaul.R
 import com.example.bettercallsaul.datalayer.BetterCallSaulModel
 
 @Composable
-fun SuccessScreen(betterCallSaulList: List<BetterCallSaulModel>) {
+fun SuccessScreen(betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewModel()) {
+
+    val betterCallSaulList by betterCallSaulViewModel.betterCallSaulState.collectAsState(initial = emptyList())
+
     LazyColumn(verticalArrangement = Arrangement.spacedBy(7.dp)) {
         items(betterCallSaulList) { betterCallSaul ->
             SuccessCard(betterCallSaul = betterCallSaul)

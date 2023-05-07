@@ -10,7 +10,7 @@ fun HomeScreen(betterCallSaulState: BetterCallSaulState) {
 
         is BetterCallSaulState.Error -> ErrorScreen()
         is BetterCallSaulState.Loading -> LoadingScreen()
-        is BetterCallSaulState.Success -> HomeScreen(betterCallSaulState = betterCallSaulState)
+        is BetterCallSaulState.Success -> SuccessScreen()
 
     }
 

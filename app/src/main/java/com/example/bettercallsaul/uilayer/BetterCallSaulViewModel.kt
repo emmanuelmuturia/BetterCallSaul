@@ -25,8 +25,8 @@ class BetterCallSaulViewModel @Inject constructor(application: Application) : An
     private val apiService = BetterCallSaulModule.providesApiService(retrofit = retrofit)
     private val repository = BetterCallSaulModule.providesRepository(betterCallSaulApiService = apiService, betterCallSaulDAO = dao)
 
-    private var _betterCallSaulState = MutableStateFlow<BetterCallSaulModel?>(null)
-    val betterCallSaulState: StateFlow<BetterCallSaulModel?> = _betterCallSaulState.asStateFlow()
+    private var _betterCallSaulState = MutableStateFlow<List<BetterCallSaulModel>>(listOf())
+    val betterCallSaulState: StateFlow<List<BetterCallSaulModel>> = _betterCallSaulState.asStateFlow()
 
     private var _betterCallSaulUiState = MutableStateFlow<BetterCallSaulState>(BetterCallSaulState.Loading)
     val betterCallSaulUiState: StateFlow<BetterCallSaulState> = _betterCallSaulUiState.asStateFlow()
