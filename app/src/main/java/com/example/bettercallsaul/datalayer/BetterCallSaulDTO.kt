@@ -29,7 +29,7 @@ data class BetterCallSaulDTO(
     val lastAppearance: List<String>,
     @SerialName("portrayed")
     val characterActor: String
-) {
+) /*{
     fun toBetterCallSaulModel(): BetterCallSaulModel {
         return BetterCallSaulModel(
             characterId = characterId,
@@ -46,4 +46,4 @@ data class BetterCallSaulDTO(
             characterActor = characterActor
         )
     }
-}
+}*/

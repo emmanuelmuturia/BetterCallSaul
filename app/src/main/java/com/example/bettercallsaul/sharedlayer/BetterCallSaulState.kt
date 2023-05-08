@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 sealed interface BetterCallSaulState {
 
-    data class Success(val characters: Flow<List<BetterCallSaulModel>>): BetterCallSaulState
+    data class Success(val characters: List<BetterCallSaulDTO>): BetterCallSaulState
 
     object Loading: BetterCallSaulState
 

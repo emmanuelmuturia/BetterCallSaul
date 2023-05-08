@@ -32,12 +32,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.example.bettercallsaul.R
+import com.example.bettercallsaul.datalayer.BetterCallSaulDTO
 import com.example.bettercallsaul.datalayer.BetterCallSaulModel
 
 @Composable
-fun SuccessScreen(betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewModel()) {
+fun SuccessScreen(betterCallSaulList: List<BetterCallSaulDTO>, betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewModel()) {
 
-    val betterCallSaulList by betterCallSaulViewModel.betterCallSaulState.collectAsState(initial = emptyList())
+    // val betterCallSaulList by betterCallSaulViewModel.betterCallSaulState.collectAsState(initial = emptyList())
 
     LazyColumn(verticalArrangement = Arrangement.spacedBy(7.dp)) {
         items(betterCallSaulList) { betterCallSaul ->
@@ -49,7 +50,7 @@ fun SuccessScreen(betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewMod
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
+fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
 
     Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(3.dp)) {
 
@@ -161,6 +162,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
 }
 
 
+/*
 @Composable
 @Preview(showBackground = true)
 fun SuccessCardPreview() {
@@ -171,4 +173,4 @@ fun SuccessCardPreview() {
     ) {
         SuccessCard(BetterCallSaulModel(characterId = "3he3t", charId = 0, characterName = "Mr. Saul", characterBirthday = "05/06/1970", characterOccupation = listOf("Lawyer"), characterImage = "${R.drawable.img}", characterNickname = listOf("Saul"), characterActor = "Bob", characterAppearance = listOf(1, 2, 3, 4, 5), characterStatus = "Alive", firstAppearance = listOf("Beginning"), lastAppearance = listOf("Final")))
     }
-}
+}*/

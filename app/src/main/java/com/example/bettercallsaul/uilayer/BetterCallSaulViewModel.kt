@@ -23,7 +23,7 @@ class BetterCallSaulViewModel @Inject constructor(application: Application) : An
     private val dao = BetterCallSaulModule.providesDAO(betterCallSaulDatabase = database)
     private val retrofit = BetterCallSaulModule.providesRetrofit()
     private val apiService = BetterCallSaulModule.providesApiService(retrofit = retrofit)
-    private val repository = BetterCallSaulModule.providesRepository(betterCallSaulApiService = apiService, betterCallSaulDAO = dao)
+    private val repository = BetterCallSaulModule.providesRepository(betterCallSaulApiService = apiService)
 
     private var _betterCallSaulState = MutableStateFlow<List<BetterCallSaulModel>>(listOf())
     val betterCallSaulState: StateFlow<List<BetterCallSaulModel>> = _betterCallSaulState.asStateFlow()
@@ -43,8 +43,8 @@ class BetterCallSaulViewModel @Inject constructor(application: Application) : An
             _betterCallSaulUiState.update { BetterCallSaulState.Loading }
 
             try {
-                repository.getAllCharacters()
-                _betterCallSaulUiState.update { BetterCallSaulState.Success(characters = repository.displayCharacters()) }
+                //repository.getAllCharacters()
+                _betterCallSaulUiState.update { BetterCallSaulState.Success(characters = repository.getCharacters()) }
             } catch (e: IOException) {
                 _betterCallSaulUiState.update { BetterCallSaulState.Error }
             }
