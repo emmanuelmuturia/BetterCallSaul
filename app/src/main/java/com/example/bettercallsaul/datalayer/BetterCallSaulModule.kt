@@ -58,8 +58,8 @@ object BetterCallSaulModule {
 
     @Provides
     @Singleton
-    fun providesRepository(betterCallSaulApiService: BetterCallSaulApiService): BetterCallSaulRepositoryImpl {
-        return BetterCallSaulRepositoryImpl(betterCallSaulApiService = betterCallSaulApiService)
+    fun providesRepository(betterCallSaulApiService: BetterCallSaulApiService, betterCallSaulDAO: BetterCallSaulDAO): BetterCallSaulRepositoryImpl {
+        return BetterCallSaulRepositoryImpl(betterCallSaulApiService = betterCallSaulApiService, betterCallSaulDAO = betterCallSaulDAO)
     }
 
 }

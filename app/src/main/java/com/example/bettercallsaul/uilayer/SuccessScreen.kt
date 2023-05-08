@@ -36,9 +36,9 @@ import com.example.bettercallsaul.datalayer.BetterCallSaulDTO
 import com.example.bettercallsaul.datalayer.BetterCallSaulModel
 
 @Composable
-fun SuccessScreen(betterCallSaulList: List<BetterCallSaulDTO>, betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewModel()) {
+fun SuccessScreen(betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewModel()) {
 
-    // val betterCallSaulList by betterCallSaulViewModel.betterCallSaulState.collectAsState(initial = emptyList())
+    val betterCallSaulList by betterCallSaulViewModel.betterCallSaulOfflineState.collectAsState()
 
     LazyColumn(verticalArrangement = Arrangement.spacedBy(7.dp)) {
         items(betterCallSaulList) { betterCallSaul ->
@@ -50,7 +50,7 @@ fun SuccessScreen(betterCallSaulList: List<BetterCallSaulDTO>, betterCallSaulVie
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
+fun SuccessCard(betterCallSaul: BetterCallSaulModel) {
 
     Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(3.dp)) {
 
@@ -82,7 +82,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                 })
             }
             Spacer(modifier = Modifier.height(3.dp))
-            Row() {
+            /*Row() {
                 Text(text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
                         append(text = "Nickname: ")
@@ -90,7 +90,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                     append(text = betterCallSaul.characterNickname.toString())
                 })
             }
-            Spacer(modifier = Modifier.height(3.dp))
+            Spacer(modifier = Modifier.height(3.dp))*/
             Row() {
                 Text(text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
@@ -100,7 +100,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                 })
             }
             Spacer(modifier = Modifier.height(3.dp))
-            Row() {
+            /*Row() {
                 Text(text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
                         append(text = "Occupation: ")
@@ -108,7 +108,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                     append(text = betterCallSaul.characterOccupation.toString())
                 })
             }
-            Spacer(modifier = Modifier.height(3.dp))
+            Spacer(modifier = Modifier.height(3.dp))*/
             Row() {
                 Text(text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
@@ -127,7 +127,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                 })
             }
             Spacer(modifier = Modifier.height(3.dp))
-            Row() {
+            /*Row() {
                 Text(text = buildAnnotatedString {
                     withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
                         append(text = "Appearance: ")
@@ -135,7 +135,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                     append(text = betterCallSaul.characterAppearance.toString())
                 })
             }
-            Spacer(modifier = Modifier.height(3.dp))
+            Spacer(modifier = Modifier.height(3.dp))*/
         }
 
     }

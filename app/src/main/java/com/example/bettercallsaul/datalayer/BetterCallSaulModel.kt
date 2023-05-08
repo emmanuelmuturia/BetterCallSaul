@@ -18,20 +18,20 @@ data class BetterCallSaulModel(
     val characterName: String,
     @ColumnInfo("birthday")
     val characterBirthday: String,
-    @ColumnInfo("occupation")
-    val characterOccupation: List<String>,
+    /*@ColumnInfo("occupation")
+    val characterOccupation: List<String>,*/
     @ColumnInfo("img")
     val characterImage: String,
     @ColumnInfo("status")
     val characterStatus: String,
-    @ColumnInfo("nickname")
-    val characterNickname: List<String>,
-    @ColumnInfo("appearance")
-    val characterAppearance: List<Int>,
-    @ColumnInfo("firstAppearance")
-    val firstAppearance: List<String>,
-    @ColumnInfo("lastAppearance")
-    val lastAppearance: List<String>,
     @ColumnInfo("portrayed")
     val characterActor: String
+    /*@ColumnInfo("nickname")
+    val characterNickname: List<String>,
+    @ColumnInfo("appearance")
+    val characterAppearance: List<Int>*/
+    /*@ColumnInfo("firstAppearance")
+    val firstAppearance: List<String>,
+    @ColumnInfo("lastAppearance")
+    val lastAppearance: List<String>*/
 )

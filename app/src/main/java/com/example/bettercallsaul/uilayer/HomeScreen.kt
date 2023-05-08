@@ -1,8 +1,6 @@
 package com.example.bettercallsaul.uilayer
 
-import androidx.compose.runtime.Composable
-import com.example.bettercallsaul.sharedlayer.BetterCallSaulState
-
+/*
 @Composable
 fun HomeScreen(betterCallSaulState: BetterCallSaulState) {
 
@@ -10,8 +8,8 @@ fun HomeScreen(betterCallSaulState: BetterCallSaulState) {
 
         is BetterCallSaulState.Error -> ErrorScreen()
         is BetterCallSaulState.Loading -> LoadingScreen()
-        is BetterCallSaulState.Success -> SuccessScreen(betterCallSaulList = betterCallSaulState.characters)
+        is BetterCallSaulState.Success -> SuccessScreen()
 
     }
 
-}
+}*/
