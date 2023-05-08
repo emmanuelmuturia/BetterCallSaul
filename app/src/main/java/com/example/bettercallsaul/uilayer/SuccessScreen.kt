@@ -107,7 +107,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                     }
                     )
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
+                    /*Text(text =
                     buildAnnotatedString {
                         withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
                             append(text = "Nickname: ")
@@ -124,7 +124,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                         append(text = betterCallSaul.characterAppearance.toString())
                     }
                     )
-                    Spacer(modifier = Modifier.height(3.dp))
+                    Spacer(modifier = Modifier.height(3.dp))*/
                     Text(text =
                     buildAnnotatedString {
                         withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
@@ -134,7 +134,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                     }
                     )
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
+                    /*Text(text =
                     buildAnnotatedString {
                         withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
                             append(text = "First Appearance: ")
@@ -151,7 +151,7 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
                         append(text = betterCallSaul.lastAppearance.toString())
                     }
                     )
-                    Spacer(modifier = Modifier.height(3.dp))
+                    Spacer(modifier = Modifier.height(3.dp))*/
                 }
             }
 

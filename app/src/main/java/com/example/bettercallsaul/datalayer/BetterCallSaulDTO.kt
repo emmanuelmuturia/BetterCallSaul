@@ -19,14 +19,14 @@ data class BetterCallSaulDTO(
     val characterImage: String,
     @SerialName("status")
     val characterStatus: String,
-    @SerialName("nickname")
+    /*@SerialName("nickname")
     val characterNickname: List<String>,
     @SerialName("appearance")
     val characterAppearance: List<Int>,
     @SerialName("firstAppearance")
     val firstAppearance: List<String>,
     @SerialName("lastAppearance")
-    val lastAppearance: List<String>,
+    val lastAppearance: List<String>,*/
     @SerialName("portrayed")
     val characterActor: String
 ) /*{
