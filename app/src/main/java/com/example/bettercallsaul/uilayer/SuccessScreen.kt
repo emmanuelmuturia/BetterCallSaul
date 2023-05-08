@@ -54,107 +54,88 @@ fun SuccessCard(betterCallSaul: BetterCallSaulDTO) {
 
     Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(3.dp)) {
 
-        Row(
-            modifier = Modifier.padding(7.dp)
+        Column(
+            modifier = Modifier.fillMaxSize()
         ) {
-            GlideImage(
-                model = betterCallSaul.characterImage,
-                contentDescription = "The Simpsons Image",
-                contentScale = ContentScale.Fit
-            )
-
-            Spacer(modifier = Modifier.width(7.dp))
-
-            Box(
-                modifier = Modifier.fillMaxSize()
-            ) {
-                Column(
-
-                ) {
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Name: ")
-                        }
-                        append(text = betterCallSaul.characterName)
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Birthday: ")
-                        }
-                        append(text = betterCallSaul.characterBirthday)
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Occupation: ")
-                        }
-                        append(text = betterCallSaul.characterOccupation.toString())
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Status: ")
-                        }
-                        append(text = betterCallSaul.characterStatus)
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    /*Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Nickname: ")
-                        }
-                        append(text = betterCallSaul.characterNickname.toString())
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Appearance: ")
-                        }
-                        append(text = betterCallSaul.characterAppearance.toString())
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))*/
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Actor: ")
-                        }
-                        append(text = betterCallSaul.characterActor)
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    /*Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "First Appearance: ")
-                        }
-                        append(text = betterCallSaul.firstAppearance.toString())
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))
-                    Text(text =
-                    buildAnnotatedString {
-                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
-                            append(text = "Last Appearance: ")
-                        }
-                        append(text = betterCallSaul.lastAppearance.toString())
-                    }
-                    )
-                    Spacer(modifier = Modifier.height(3.dp))*/
-                }
+            Box {
+               GlideImage(
+                   model = betterCallSaul.characterImage,
+                   contentDescription = "Character Image",
+                   contentScale = ContentScale.Crop
+                   )
             }
+        }
 
+        Spacer(modifier = Modifier.height(7.dp))
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(3.dp)
+        ) {
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Name: ")
+                    }
+                    append(text = betterCallSaul.characterName)
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Nickname: ")
+                    }
+                    append(text = betterCallSaul.characterNickname.toString())
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Birthday: ")
+                    }
+                    append(text = betterCallSaul.characterBirthday)
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Occupation: ")
+                    }
+                    append(text = betterCallSaul.characterOccupation.toString())
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Status: ")
+                    }
+                    append(text = betterCallSaul.characterStatus)
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Actor: ")
+                    }
+                    append(text = betterCallSaul.characterActor)
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
+            Row() {
+                Text(text = buildAnnotatedString {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold)) {
+                        append(text = "Appearance: ")
+                    }
+                    append(text = betterCallSaul.characterAppearance.toString())
+                })
+            }
+            Spacer(modifier = Modifier.height(3.dp))
         }
 
     }
