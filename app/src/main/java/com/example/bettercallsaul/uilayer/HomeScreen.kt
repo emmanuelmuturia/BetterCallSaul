@@ -1,6 +1,8 @@
 package com.example.bettercallsaul.uilayer
 
-/*
+import androidx.compose.runtime.Composable
+import com.example.bettercallsaul.sharedlayer.BetterCallSaulState
+
 @Composable
 fun HomeScreen(betterCallSaulState: BetterCallSaulState) {
 
@@ -12,4 +14,4 @@ fun HomeScreen(betterCallSaulState: BetterCallSaulState) {
 
     }
 
-}*/
+}

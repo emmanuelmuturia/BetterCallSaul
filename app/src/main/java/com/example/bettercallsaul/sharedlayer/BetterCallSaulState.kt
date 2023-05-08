@@ -4,12 +4,13 @@ import com.example.bettercallsaul.datalayer.BetterCallSaulDTO
 import com.example.bettercallsaul.datalayer.BetterCallSaulModel
 import kotlinx.coroutines.flow.Flow
 
-/*
 sealed interface BetterCallSaulState {
-    data class Success(val characters: Flow<List<BetterCallSaulModel>>): BetterCallSaulState
+
+    // val characters: Flow<List<BetterCallSaulModel>>
+    object Success: BetterCallSaulState
 
     object Loading: BetterCallSaulState
 
     object Error: BetterCallSaulState
 
-}*/
+}

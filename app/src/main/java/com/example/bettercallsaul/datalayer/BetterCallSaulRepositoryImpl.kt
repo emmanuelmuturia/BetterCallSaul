@@ -18,7 +18,10 @@ class BetterCallSaulRepositoryImpl(private val betterCallSaulApiService: BetterC
             characterBirthday = characterBirthday,
             characterImage = characterImage,
             characterStatus = characterStatus,
-            characterActor = characterActor
+            characterActor = characterActor,
+            /*characterNickname = characterNickname,
+            characterAppearance = characterAppearance,
+            characterOccupation = characterOccupation*/
         )
     }
     override suspend fun fetchCharacters(): List<BetterCallSaulModel> {

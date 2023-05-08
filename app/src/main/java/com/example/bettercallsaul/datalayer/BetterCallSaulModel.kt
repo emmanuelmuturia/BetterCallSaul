@@ -25,7 +25,7 @@ data class BetterCallSaulModel(
     @ColumnInfo("status")
     val characterStatus: String,
     @ColumnInfo("portrayed")
-    val characterActor: String
+    val characterActor: String,
     /*@ColumnInfo("nickname")
     val characterNickname: List<String>,
     @ColumnInfo("appearance")

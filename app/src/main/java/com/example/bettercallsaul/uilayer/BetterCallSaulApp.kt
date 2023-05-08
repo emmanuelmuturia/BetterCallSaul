@@ -38,16 +38,11 @@ import com.example.bettercallsaul.R
 @Composable
 fun BetterCallSaulApp(betterCallSaulViewModel: BetterCallSaulViewModel = hiltViewModel()) {
 
-    // val betterCallSaulState by betterCallSaulViewModel.betterCallSaulUiState.collectAsState()
+    val betterCallSaulState by betterCallSaulViewModel.betterCallSaulUiState.collectAsState()
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = { BetterCallSaulAppBar() },
-        /*floatingActionButton = {
-            FloatingActionButton(onClick = { theSimpsonsViewModel.getTheSimpsonsQuotes() }, containerColor = Color.Yellow) {
-                Icon(imageVector = Icons.Rounded.Refresh, contentDescription = "Refresh")
-            }
-        }*/
     ) {
         Surface(
             modifier = Modifier
@@ -55,8 +50,7 @@ fun BetterCallSaulApp(betterCallSaulViewModel: BetterCallSaulViewModel = hiltVie
                 .padding(it),
             color = Color.DarkGray
         ) {
-            //HomeScreen(betterCallSaulState = betterCallSaulState)
-            SuccessScreen()
+            HomeScreen(betterCallSaulState = betterCallSaulState)
         }
     }
 

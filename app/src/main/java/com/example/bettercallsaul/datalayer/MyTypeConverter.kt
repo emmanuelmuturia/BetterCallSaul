@@ -1,7 +1,9 @@
 package com.example.bettercallsaul.datalayer
 
+import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 
+@ProvidedTypeConverter
 class MyTypeConverter {
 
     @TypeConverter
