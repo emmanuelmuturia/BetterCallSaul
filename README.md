@@ -44,3 +44,15 @@ How To Use
 Notables
 ------------------------------------------------
 - In your DTO and Entity data classes, be careful when using the "firstAppearance" and "lastAppearance" attributes as they seem to be raising an EOF type error which is typical for wrongly formatted or deserialized .json responses.
+
+
+-------------------------------------------------
+Screenshots
+-------------------------------------------------
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/c352ce70-57b7-4621-8163-c6dca0bdac7d)
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/64ab0d8c-3da5-49c7-8103-d53fc83284f6)
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/bc8170bc-ecfd-4614-9b89-f93dda28e3f9)
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/6abb240a-2ebf-4461-92cd-ebc83fff5326)
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/ebb49d86-99c8-4b3f-a9eb-c06b887fbbd9)
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/15f3aa00-2e10-417b-a6a0-c2394bc35e7d)
+![image](https://github.com/emmanuelmuturia/BetterCallSaul/assets/55001497/5781c0bd-e7c2-422e-85a7-0c5165916504)
